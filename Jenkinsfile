@@ -1,6 +1,12 @@
 pipeline {
     agent any 
     stages {
+        stage('Pre Build') {
+            steps {
+            sh 'npm install'
+            echo 'npm installation is done'
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'npm run build'
