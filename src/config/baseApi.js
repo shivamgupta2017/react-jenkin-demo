@@ -1,0 +1,1 @@
+export const baseApi = "https://emoney-dev.citizens.com.mm:19110/"

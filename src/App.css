@@ -1,0 +1,14 @@
+.myloading{
+    padding-top: 400px;
+    text-align: center;
+    min-height: 690px;
+}
+.error_bar{
+    text-align: center;
+    padding: 1% 0 1% 1%;
+    background-color: #f57474;
+    margin-bottom: 1%;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
