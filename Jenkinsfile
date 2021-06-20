@@ -21,6 +21,8 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
+                sh 'pwd'
+                sh 'aws s3 cp $WORKSPACE/build s3://sample-application-bucket-react --recursive --include "*"'
                 echo 'third step completed!'
             }
         }
