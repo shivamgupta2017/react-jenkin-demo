@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh 'npm run test --passWithNoTests'
+                sh 'npm run test'
                 echo 'second step completed'
             }
         }
