@@ -1,8 +1,9 @@
 pipeline {
-    agent {
-        dockerfile true
-        echo 'docker installation is done'
-    }
+    agent { 
+            docker {
+                label 'my_label_name' dockerfile true
+            }
+        }
     stages {
         stage('Pre Build') {
             steps {
