@@ -1,9 +1,6 @@
 pipeline {
     agent {
-        dockerfile {
-            filename 'Dockerfile'
-            reuseNode true
-        }
+        dockerfile true
         echo 'docker installation is done'
     }
     stages {
