@@ -1,7 +1,6 @@
 pipeline {
     agent {
         dockerfile {
-            label BUILD_AGENT
             filename 'Dockerfile'
             reuseNode true
         }
@@ -26,13 +25,13 @@ pipeline {
                 echo 'second step completed'
             }
         }
-        stage('Deploy') { 
-            steps {
-                sh 'pwd'
-                sh '$WORKSPACE'
-                sh 'aws s3 cp $WORKSPACE/build s3://sample-application-bucket-react --recursive --include "*"'
-                echo 'third step completed!'
-            }
-        }
+        // stage('Deploy') { 
+        //     steps {
+        //         sh 'pwd'
+        //         sh '$WORKSPACE'
+        //         sh 'aws s3 cp $WORKSPACE/build s3://sample-application-bucket-react --recursive --include "*"'
+        //         echo 'third step completed!'
+        //     }
+        // }
     }
 }
