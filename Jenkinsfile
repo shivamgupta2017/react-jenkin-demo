@@ -1,6 +1,11 @@
 pipeline {
     agent {
-    docker { image 'node:14-alpine' } 
+        dockerfile {
+            label BUILD_AGENT
+            filename 'Dockerfile'
+            reuseNode true
+        }
+        echo 'docker installation is done'
     }
     stages {
         stage('Pre Build') {
