@@ -1,8 +1,6 @@
 pipeline {
     agent { 
-            docker {
-                label 'my_label_name' dockerfile true
-            }
+             dockerfile true
         }
     stages {
         stage('Pre Build') {
